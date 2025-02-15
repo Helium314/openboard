@@ -672,6 +672,7 @@ public class LatinIME extends InputMethodService implements
         if (mDictionaryFacilitator.isForLocale(subtypeLocale)
                 && mDictionaryFacilitator.isForAccount(mSettings.getCurrent().mAccount)
                 && mDictionaryFacilitator.usesContacts() == mSettings.getCurrent().mUseContactsDictionary
+                && mDictionaryFacilitator.usesApps() == mSettings.getCurrent().mUseAppsDictionary
                 && mDictionaryFacilitator.usesPersonalization() == mSettings.getCurrent().mUsePersonalizedDicts
         ) {
             return;
@@ -689,8 +690,8 @@ public class LatinIME extends InputMethodService implements
     private void resetDictionaryFacilitator(@NonNull final Locale locale) {
         final SettingsValues settingsValues = mSettings.getCurrent();
         mDictionaryFacilitator.resetDictionaries(this, locale,
-                settingsValues.mUseContactsDictionary, settingsValues.mUsePersonalizedDicts,
-                false, settingsValues.mAccount, "", this);
+                settingsValues.mUseContactsDictionary, settingsValues.mUseAppsDictionary,
+                settingsValues.mUsePersonalizedDicts, false, settingsValues.mAccount, "", this);
         if (settingsValues.mAutoCorrectEnabled) {
             mInputLogic.mSuggest.setAutoCorrectionThreshold(settingsValues.mAutoCorrectionThreshold);
         }
@@ -703,7 +704,7 @@ public class LatinIME extends InputMethodService implements
         final SettingsValues settingsValues = mSettings.getCurrent();
         mDictionaryFacilitator.resetDictionaries(this /* context */,
                 mDictionaryFacilitator.getMainLocale(), settingsValues.mUseContactsDictionary,
-                settingsValues.mUsePersonalizedDicts,
+                settingsValues.mUseAppsDictionary, settingsValues.mUsePersonalizedDicts,
                 true /* forceReloadMainDictionary */,
                 settingsValues.mAccount, "" /* dictNamePrefix */,
                 this /* DictionaryInitializationListener */);
