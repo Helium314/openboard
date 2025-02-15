@@ -130,6 +130,13 @@
             android:persistent="true" />
 
         <SwitchPreference
+            android:key="use_apps"
+            android:title="@string/use_apps_dict"
+            android:summary="@string/use_apps_dict_summary"
+            android:defaultValue="false"
+            android:persistent="true" />
+
+        <SwitchPreference
             android:key="add_to_personal_dictionary"
             android:title="@string/add_to_personal_dictionary"
             android:summary="@string/add_to_personal_dictionary_summary"

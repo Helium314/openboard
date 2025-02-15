@@ -32,11 +32,13 @@ public interface DictionaryFacilitator {
     String[] ALL_DICTIONARY_TYPES = new String[] {
             Dictionary.TYPE_MAIN,
             Dictionary.TYPE_CONTACTS,
+            Dictionary.TYPE_APPS,
             Dictionary.TYPE_USER_HISTORY,
             Dictionary.TYPE_USER};
 
     String[] DYNAMIC_DICTIONARY_TYPES = new String[] {
             Dictionary.TYPE_CONTACTS,
+            Dictionary.TYPE_APPS,
             Dictionary.TYPE_USER_HISTORY,
             Dictionary.TYPE_USER};
 
@@ -93,6 +95,8 @@ public interface DictionaryFacilitator {
 
     boolean usesContacts();
 
+    boolean usesApps();
+
     boolean usesPersonalization();
 
     String getAccount();
@@ -101,6 +105,7 @@ public interface DictionaryFacilitator {
             final Context context,
             final Locale newLocale,
             final boolean useContactsDict,
+            final boolean useAppsDict,
             final boolean usePersonalizedDicts,
             final boolean forceReloadMainDictionary,
             @Nullable final String account,

@@ -80,6 +80,10 @@
     <string name="use_contacts_dict">Suggest Contact names</string>
     <!-- Description for option enabling or disabling the use of names of people in Contacts for suggestion and correction [CHAR LIMIT=65] -->
     <string name="use_contacts_dict_summary">Use names from Contacts for suggestions and corrections</string>
+    <!-- Option name for enabling or disabling the use of installed app names for suggestion and correction [CHAR LIMIT=25] -->
+    <string name="use_apps_dict">Suggest app names</string>
+    <!-- Description for option enabling or disabling the use of installed app names for suggestion and correction [CHAR LIMIT=65] -->
+    <string name="use_apps_dict_summary">Use names of installed apps for suggestions and corrections</string>
     <!-- Option name for enabling the use by the keyboards of sent/received messages, e-mail and typing history to improve suggestion accuracy [CHAR LIMIT=25] -->
     <string name="use_personalized_dicts">Personalized suggestions</string>
     <!-- Dialog message informing that dictionaries will be deleted on changing the setting -->
@@ -375,7 +379,7 @@
     <string name="subtype_with_layout_dru" tools:keep="@string/subtype_with_layout_dru">Urakhi (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <string name="subtype_with_layout_xdq" tools:keep="@string/subtype_with_layout_xdq">Kaitag (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for Serbian (Latin) keyboard subtype with explicit keyboard layout [CHAR LIMIT=25]
-         This should be identical to subtype_sr_ZZ aside from the trailing (%s). -->      
+         This should be identical to subtype_sr_ZZ aside from the trailing (%s). -->
     <string name="subtype_with_layout_sr_Latn" tools:keep="@string/subtype_with_layout_sr_Latn">Serbian (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for "LANGUAGE_NAME" (Traditional) keyboard subtype [CHAR LIMIT=25]
          (Traditional) can be an abbreviation to fit in the CHAR LIMIT. -->
